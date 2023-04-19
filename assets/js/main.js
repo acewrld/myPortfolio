@@ -1,12 +1,6 @@
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
-	var	$window = $(window),
+	let	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
@@ -34,7 +28,7 @@
 	// Fix: Flexbox min-height bug on IE.
 		if (browser.name == 'ie') {
 
-			var flexboxFixTimeoutId;
+			let flexboxFixTimeoutId;
 
 			$window.on('resize.flexbox-fix', function() {
 
@@ -54,7 +48,7 @@
 		}
 
 	// Nav.
-		var $nav = $header.children('nav'),
+		let $nav = $header.children('nav'),
 			$nav_li = $nav.find('li');
 
 		// Add "middle" alignment classes if we're dealing with an even number of items.
@@ -66,13 +60,13 @@
 			}
 
 	// Main.
-		var	delay = 325,
+		let	delay = 325,
 			locked = false;
 
 		// Methods.
 			$main._show = function(id, initial) {
 
-				var $article = $main_articles.filter('#' + id);
+				let $article = $main_articles.filter('#' + id);
 
 				// No such article? Bail.
 					if ($article.length == 0)
@@ -122,7 +116,7 @@
 					if ($body.hasClass('is-article-visible')) {
 
 						// Deactivate current article.
-							var $currentArticle = $main_articles.filter('.active');
+							let $currentArticle = $main_articles.filter('.active');
 
 							$currentArticle.removeClass('active');
 
@@ -199,7 +193,7 @@
 
 			$main._hide = function(addState) {
 
-				var $article = $main_articles.filter('.active');
+				let $article = $main_articles.filter('.active');
 
 				// Article not visible? Bail.
 					if (!$body.hasClass('is-article-visible'))
@@ -289,7 +283,7 @@
 		// Articles.
 			$main_articles.each(function() {
 
-				var $this = $(this);
+				let $this = $(this);
 
 				// Close.
 					$('<div class="close">Close</div>')
@@ -368,7 +362,7 @@
 				history.scrollRestoration = 'manual';
 			else {
 
-				var	oldScrollPos = 0,
+				let	oldScrollPos = 0,
 					scrollPos = 0,
 					$htmlbody = $('html,body');
 

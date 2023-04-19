@@ -48,7 +48,7 @@
 		// Multiple elements?
 			if (this.length > 1) {
 
-				for (var i=0; i < this.length; i++)
+				for (let i=0; i < this.length; i++)
 					$(this[i]).panel(userConfig);
 
 				return $this;
@@ -56,7 +56,7 @@
 			}
 
 		// Vars.
-			var	$this = $(this),
+			let	$this = $(this),
 				$body = $('body'),
 				$window = $(window),
 				id = $this.attr('id'),
@@ -199,7 +199,7 @@
 					// Hide on swipe?
 						if (config.hideOnSwipe) {
 
-							var result = false,
+							let result = false,
 								boundary = 20,
 								delta = 50;
 
